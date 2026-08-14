@@ -33,7 +33,7 @@ const Home = () => {
   const featuredExperiences = useMemo(() => experiences.slice(0, 4), []);
   const featuredBlogs = useMemo(() => blogPosts.slice(0, 3), []);
 
-  useSeo('Voyara Travel | Discover More. Travel Better.', 'Voyara Travel is a premium travel company frontend with curated destinations, tours, booking, and editorial travel content.');
+  useSeo('Davis_Gee Travel | Discover More. Travel Better.', 'Davis_Gee Travel is a premium travel company frontend with curated destinations, tours, booking, and editorial travel content.');
 
   return (
     <div className="bg-white text-slate-950">
@@ -43,26 +43,26 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="shell pb-10 pt-4 lg:pb-14 lg:pt-8">
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div className="space-y-8">
-            <div className="space-y-5">
-              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-slate-500 shadow-sm">
+      <section className="shell pb-8 pt-4 sm:pb-10 lg:pb-14 lg:pt-8">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="space-y-6 sm:space-y-7">
+            <div className="space-y-4 sm:space-y-5">
+              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500 shadow-sm sm:px-4 sm:text-xs">
                 <Sparkles size={14} /> Travel With Davis
               </p>
-              <h1 className="max-w-3xl text-balance text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-[5.5rem] lg:leading-[0.95]">
+              <h1 className="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-[5.5rem] lg:leading-[0.95]">
                 Let&apos;s Move Your Travel Forward
               </h1>
-              <p className="max-w-xl text-lg leading-8 text-slate-950 sm:text-xl">
+              <p className="max-w-xl text-base leading-7 text-slate-950 sm:text-lg sm:leading-8">
                 Premium journeys, thoughtful planning, and a calmer way to book the next trip.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <button type="button" onClick={() => navigate('/destinations')} className="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <button type="button" onClick={() => navigate('/destinations')} className="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 sm:px-6">
                 Explore Destinations
               </button>
-              <button type="button" onClick={() => navigate('/booking')} className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:border-slate-400 hover:bg-slate-50">
+              <button type="button" onClick={() => navigate('/booking')} className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-slate-400 hover:bg-slate-50 sm:px-6">
                 Plan My Trip
               </button>
             </div>
@@ -90,18 +90,18 @@ const Home = () => {
               </div>
             </div>
 
-              <div className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-100 shadow-[0_28px_80px_rgba(15,23,42,0.12)]">
+            <div className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-slate-100 shadow-[0_28px_80px_rgba(15,23,42,0.12)] sm:rounded-[2.5rem]">
               <img
                 src={imageUrl('hero-container-ship', 1200, 900)}
-                alt="Voyara Travel premium editorial travel visual"
-                className="h-[420px] w-full object-cover sm:h-[520px]"
+                alt="Davis_Gee Travel premium editorial travel visual"
+                className="h-[300px] w-full object-cover sm:h-[420px] lg:h-[520px]"
               />
             </div>
           </div>
         </div>
 
-        <div className="mt-6 rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm lg:-mt-12 lg:relative lg:z-10">
-          <SearchBar mode="hero" variant="light" className="rounded-[1.5rem] bg-[#f6f3ee] p-4 sm:p-5" />
+        <div className="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-sm sm:rounded-[2rem] sm:p-4 lg:-mt-12 lg:relative lg:z-10">
+          <SearchBar mode="hero" variant="light" className="rounded-[1.25rem] bg-[#f6f3ee] p-3 sm:rounded-[1.5rem] sm:p-4" />
         </div>
       </section>
 

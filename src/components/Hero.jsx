@@ -25,7 +25,7 @@ export const Hero = ({ onSearch }) => (
 
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div className="max-w-3xl space-y-6">
-              <p className="eyebrow text-amber-200">Voyara Travel</p>
+              <p className="eyebrow text-amber-200">Davis_Gee Travel</p>
               <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Explore the World on Your Terms
               </h1>

@@ -34,7 +34,7 @@ export const SearchBar = ({
   const destinationOptions = useMemo(() => destinations.map((destination) => destination.name), []);
   const travelTypeOptions = useMemo(() => ['all', ...new Set(tours.map((tour) => tour.travelType))], []);
   const durationOptions = ['all', '3-5 days', '6-8 days', '9+ days'];
-  
+
   const handleChange = (field, nextValue) => {
     setValues((current) => {
       const updated = { ...current, [field]: nextValue };
@@ -54,7 +54,7 @@ export const SearchBar = ({
 
     return (
       <form onSubmit={handleSubmit} className={`grid gap-3 ${className}`}>
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
           <label className="block xl:col-span-2">
             <span className="premium-label">Where do you want to go?</span>
             <input
@@ -62,9 +62,9 @@ export const SearchBar = ({
               onChange={(event) => handleChange('destination', event.target.value)}
               placeholder="Paris, Dubai, Maldives..."
               className={inputClass}
-              list="voyara-destinations"
+              list="davis-gee-destinations"
             />
-            <datalist id="voyara-destinations">
+            <datalist id="davis-gee-destinations">
               {destinationOptions.map((option) => (
                 <option key={option} value={option} />
               ))}
@@ -119,9 +119,9 @@ export const SearchBar = ({
             onChange={(event) => handleChange('destination', event.target.value)}
             placeholder="Search tours or destinations"
             className={variant === 'light' ? 'w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-950 placeholder:text-slate-400 transition duration-200 focus:border-slate-400 focus:ring-2 focus:ring-slate-200' : 'premium-input'}
-            list="voyara-filters-destination"
+            list="davis-gee-filters-destination"
           />
-          <datalist id="voyara-filters-destination">
+          <datalist id="davis-gee-filters-destination">
             {destinationOptions.map((option) => (
               <option key={option} value={option} />
             ))}

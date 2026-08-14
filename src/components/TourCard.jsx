@@ -9,8 +9,8 @@ export const TourCard = ({ tour }) => {
   const saved = isSaved(tour.slug, 'tour');
 
   return (
-    <article className="surface card-hover group overflow-hidden rounded-[1.75rem]">
-      <div className="relative h-64 overflow-hidden">
+    <article className="surface card-hover group overflow-hidden rounded-[1.4rem] sm:rounded-[1.75rem]">
+      <div className="relative h-60 overflow-hidden sm:h-64">
         <img src={tour.image} alt={tour.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
         <button

@@ -10,7 +10,7 @@ const Destinations = () => {
   const navigate = useNavigate();
   const [filters, setFilters] = useState({ destination: '', price: 'all', duration: 'all', travelType: 'all', rating: 'all', sort: 'popular' });
 
-  useSeo('Destinations | Voyara Travel', 'Browse premium travel destinations curated by Voyara Travel.');
+  useSeo('Destinations | Davis_Gee Travel', 'Browse premium travel destinations curated by Davis_Gee Travel.');
 
   const filteredDestinations = useMemo(() => {
     const normalized = filters.destination.trim().toLowerCase();

@@ -11,7 +11,7 @@ const TourDetails = () => {
   const { slug } = useParams();
   const tour = findTourBySlug(slug);
 
-  useSeo(tour ? `${tour.title} | Voyara Travel` : 'Tour Details | Voyara Travel', tour?.description || 'Voyara Travel tour details.');
+  useSeo(tour ? `${tour.title} | Davis_Gee Travel` : 'Tour Details | Davis_Gee Travel', tour?.description || 'Davis_Gee Travel tour details.');
 
   if (!tour) {
     return (

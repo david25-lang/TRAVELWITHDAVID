@@ -31,22 +31,22 @@ export const Footer = () => (
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-8">
           <div>
-            <p className="eyebrow">Voyara Travel</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Get travel inspiration in your inbox.</h2>
-            <p className="mt-4 max-w-2xl text-slate-300">
+            <p className="eyebrow">Davis_Gee Travel</p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl">Get travel inspiration in your inbox.</h2>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
               Premium trip ideas, seasonal offers, and practical destination notes delivered with a calm cadence.
             </p>
           </div>
           <NewsletterForm compact />
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300">
+          <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap sm:items-center">
             <span className="inline-flex items-center gap-2"><Mail size={16} /> davidyinka660@gmail.com</span>
             <span className="inline-flex items-center gap-2"><Phone size={16} /> +2349135074211</span>
             <span className="inline-flex items-center gap-2"><MapPin size={16} /> Lagos, Nigeria</span>
           </div>
         </div>
 
-        <div className="surface-strong rounded-[2rem] p-6 lg:p-8">
-          <div className="grid gap-8 sm:grid-cols-3">
+        <div className="surface-strong rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-6 lg:p-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(columns).map(([title, items]) => (
               <div key={title}>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">{title}</h3>
@@ -74,7 +74,7 @@ export const Footer = () => (
       </div>
 
       <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-        <p>© 2026 Voyara Travel. All rights reserved.</p>
+        <p>© 2026 Davis_Gee Travel. All rights reserved.</p>
         <p>Discover More. Travel Better.</p>
       </div>
     </div>

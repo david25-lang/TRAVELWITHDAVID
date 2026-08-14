@@ -6,13 +6,13 @@ import { destinations } from '../data/siteData';
 import { useSeo } from '../hooks/useSeo';
 
 const Contact = () => {
-  useSeo('Contact | Voyara Travel', 'Contact Voyara Travel for premium travel planning, support, and custom trip requests.');
+  useSeo('Contact | Davis_Gee Travel', 'Contact Davis_Gee Travel for premium travel planning, support, and custom trip requests.');
 
   return (
     <div className="pb-24">
       <PageHero
         eyebrow="Contact"
-        title="Talk to Voyara about your next trip"
+        title="Talk to Davis_Gee about your next trip"
         description="Use the contact form for custom requests, planning support, and general travel questions."
         image={destinations[5].image}
       />

@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const ExperienceCard = ({ experience }) => (
-  <article className="surface card-hover overflow-hidden rounded-[1.75rem]">
-    <div className="relative h-72 overflow-hidden">
+  <article className="surface card-hover overflow-hidden rounded-[1.4rem] sm:rounded-[1.75rem]">
+    <div className="relative h-60 overflow-hidden sm:h-72">
       <img src={experience.image} alt={experience.title} className="h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
       <div className="absolute bottom-4 left-4 right-4">

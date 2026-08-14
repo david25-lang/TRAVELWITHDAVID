@@ -66,18 +66,18 @@ export const BookingForm = ({ initialData = {} }) => {
     event.preventDefault();
     setError('');
     setSuccess(true);
-    const bookings = JSON.parse(window.localStorage.getItem('voyara-bookings') || '[]');
+    const bookings = JSON.parse(window.localStorage.getItem('davis-gee-bookings') || '[]');
     bookings.unshift({ ...form, total, confirmedAt: new Date().toISOString() });
-    window.localStorage.setItem('voyara-bookings', JSON.stringify(bookings.slice(0, 8)));
+    window.localStorage.setItem('davis-gee-bookings', JSON.stringify(bookings.slice(0, 8)));
   };
 
   return (
-    <form onSubmit={confirmBooking} className="surface-strong rounded-[2rem] p-6 lg:p-8">
-      <div className="mb-8 grid gap-3 sm:grid-cols-4">
+    <form onSubmit={confirmBooking} className="surface-strong rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-6 lg:p-8">
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {steps.map((label, index) => (
-          <div key={label} className={`rounded-2xl px-4 py-3 text-sm ${index <= step ? 'bg-amber-300 text-slate-950' : 'bg-white/5 text-slate-400'}`}>
+          <div key={label} className={`rounded-2xl px-3 py-3 text-xs sm:text-sm ${index <= step ? 'bg-amber-300 text-slate-950' : 'bg-white/5 text-slate-400'}`}>
             <span className="block font-semibold">Step {index + 1}</span>
-            {label}
+            <span className="mt-1 block leading-5">{label}</span>
           </div>
         ))}
       </div>
@@ -175,20 +175,20 @@ export const BookingForm = ({ initialData = {} }) => {
         </div>
       ) : null}
 
-      <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-        <button type="button" onClick={() => setStep((current) => Math.max(current - 1, 0))} className={`ghost-button ${step === 0 ? 'pointer-events-none opacity-50' : ''}`}>
+      <div className="mt-8 flex flex-col-reverse gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <button type="button" onClick={() => setStep((current) => Math.max(current - 1, 0))} className={`ghost-button w-full justify-center sm:w-auto ${step === 0 ? 'pointer-events-none opacity-50' : ''}`}>
           <ArrowLeft size={16} />
           Back
         </button>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           {step < 3 ? (
-            <button type="button" onClick={nextStep} className="gold-button">
+            <button type="button" onClick={nextStep} className="gold-button w-full justify-center sm:w-auto">
               Next
               <ArrowRight size={16} />
             </button>
           ) : (
-            <button type="submit" className="gold-button">
+            <button type="submit" className="gold-button w-full justify-center sm:w-auto">
               <CreditCard size={16} />
               Confirm Booking
             </button>

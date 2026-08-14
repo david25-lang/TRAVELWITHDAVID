@@ -5,7 +5,7 @@ import { destinations } from '../data/siteData';
 import { useSeo } from '../hooks/useSeo';
 
 const Booking = () => {
-  useSeo('Booking | Voyara Travel', 'Book a premium trip with Voyara Travel using a multi-step frontend booking flow.');
+  useSeo('Booking | Davis_Gee Travel', 'Book a premium trip with Davis_Gee Travel using a multi-step frontend booking flow.');
 
   return (
     <div className="pb-24">

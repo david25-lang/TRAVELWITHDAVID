@@ -12,7 +12,7 @@ const DestinationDetails = () => {
   const { slug } = useParams();
   const destination = findDestinationBySlug(slug);
 
-  useSeo(destination ? `${destination.name} | Voyara Travel` : 'Destination | Voyara Travel', destination?.description || 'Voyara Travel destination details.');
+  useSeo(destination ? `${destination.name} | Davis_Gee Travel` : 'Destination | Davis_Gee Travel', destination?.description || 'Davis_Gee Travel destination details.');
 
   const relatedDestinations = useMemo(() => destinations.filter((item) => item.slug !== slug && !!destination?.related?.includes(item.slug)).slice(0, 3), [slug, destination]);
   const relatedTours = useMemo(() => tours.filter((tour) => !!destination?.tours?.includes(tour.slug)), [destination]);

@@ -8,7 +8,7 @@ import { useSeo } from '../hooks/useSeo';
 const Tours = () => {
   const [filters, setFilters] = useState({ destination: '', price: 'all', duration: 'all', travelType: 'all', rating: 'all', sort: 'popular' });
 
-  useSeo('Tours | Voyara Travel', 'Find curated tours, compare pricing, and sort by popularity or rating.');
+  useSeo('Tours | Davis_Gee Travel', 'Find curated tours, compare pricing, and sort by popularity or rating.');
 
   const filteredTours = useMemo(() => {
     const normalized = filters.destination.trim().toLowerCase();

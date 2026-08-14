@@ -596,7 +596,7 @@ export const testimonials = [
     location: 'Lagos, Nigeria',
     rating: 5,
     image: imageUrl('1494790108377-be9c29b29330', 500, 500),
-    quote: 'Voyara handled our Dubai trip with real polish. Every transfer, dinner suggestion, and hotel choice felt curated rather than generic.',
+    quote: 'Davis_Gee handled our Dubai trip with real polish. Every transfer, dinner suggestion, and hotel choice felt curated rather than generic.',
   },
   {
     name: 'Daniel Morgan',

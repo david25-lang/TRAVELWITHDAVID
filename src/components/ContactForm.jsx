@@ -28,9 +28,9 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="surface-strong rounded-[2rem] p-6 lg:p-8">
+    <form onSubmit={handleSubmit} className="surface-strong rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-6 lg:p-8">
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="block">
+        <label className="block md:col-span-2">
           <span className="premium-label">Name</span>
           <input className="premium-input" value={form.name} onChange={(event) => handleChange('name', event.target.value)} />
         </label>

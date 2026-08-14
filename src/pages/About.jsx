@@ -7,14 +7,14 @@ import { team, stats, faqs, destinations } from '../data/siteData';
 import { useSeo } from '../hooks/useSeo';
 
 const About = () => {
-  useSeo('About Voyara Travel', 'Learn about Voyara Travel, our mission, values, and premium travel philosophy.');
+  useSeo('About Davis_Gee Travel', 'Learn about Davis_Gee Travel, our mission, values, and premium travel philosophy.');
 
   return (
     <div className="pb-24">
       <PageHero
         eyebrow="About"
         title="A travel company built around taste, trust, and thoughtful service"
-        description="Voyara Travel is a fictional premium agency concept designed to feel modern, mature, and quietly confident."
+        description="Davis_Gee Travel is a fictional premium agency concept designed to feel modern, mature, and quietly confident."
         image={destinations[2].image}
       />
 
@@ -23,9 +23,9 @@ const About = () => {
 
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <SectionHeading eyebrow="Our Story" title="Why Voyara exists" description="To make premium travel planning feel clear, human, and visually refined." />
+            <SectionHeading eyebrow="Our Story" title="Why Davis_Gee exists" description="To make premium travel planning feel clear, human, and visually refined." />
             <p className="mt-6 text-sm leading-7 text-slate-300">
-              Voyara exists as a frontend case study for a company that treats travel as an experience worth designing carefully. The brand balances luxury and practicality, with a visual system that feels calm rather than flashy.
+              Davis_Gee exists as a frontend case study for a company that treats travel as an experience worth designing carefully. The brand balances luxury and practicality, with a visual system that feels calm rather than flashy.
             </p>
           </div>
           <div className="surface rounded-[2rem] p-6 lg:p-8">

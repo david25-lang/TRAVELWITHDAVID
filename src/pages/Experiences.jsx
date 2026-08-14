@@ -5,7 +5,7 @@ import { experiences, destinations } from '../data/siteData';
 import { useSeo } from '../hooks/useSeo';
 
 const Experiences = () => {
-  useSeo('Experiences | Voyara Travel', 'Browse editorial travel experience cards for safari, resorts, culture, mountains, and islands.');
+  useSeo('Experiences | Davis_Gee Travel', 'Browse editorial travel experience cards for safari, resorts, culture, mountains, and islands.');
 
   return (
     <div className="pb-24">

@@ -8,7 +8,7 @@ import { useSeo } from '../hooks/useSeo';
 
 const Wishlist = () => {
   const { items, clearWishlist, removeItem } = useWishlist();
-  useSeo('My Wishlist | Voyara Travel', 'Saved destinations and tours stored in localStorage.');
+  useSeo('My Wishlist | Davis_Gee Travel', 'Saved destinations and tours stored in localStorage.');
 
   const fullItems = items.map((item) => {
     const source = item.type === 'tour' ? tours.find((tour) => tour.slug === item.slug) : destinations.find((destination) => destination.slug === item.slug);

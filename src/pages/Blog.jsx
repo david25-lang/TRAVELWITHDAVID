@@ -5,7 +5,7 @@ import { blogPosts, destinations } from '../data/siteData';
 import { useSeo } from '../hooks/useSeo';
 
 const Blog = () => {
-  useSeo('Travel Guide | Voyara Travel', 'Read Voyara Travel editorial travel articles, packing guides, and destination advice.');
+  useSeo('Travel Guide | Davis_Gee Travel', 'Read Davis_Gee Travel editorial travel articles, packing guides, and destination advice.');
 
   return (
     <div className="pb-24">

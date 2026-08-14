@@ -9,7 +9,7 @@ const BlogDetails = () => {
   const post = findBlogPostBySlug(slug);
   const related = blogPosts.filter((item) => item.slug !== slug).slice(0, 3);
 
-  useSeo(post ? `${post.title} | Voyara Travel` : 'Travel Guide | Voyara Travel', post?.excerpt || 'Voyara Travel editorial guide article.');
+  useSeo(post ? `${post.title} | Davis_Gee Travel` : 'Travel Guide | Davis_Gee Travel', post?.excerpt || 'Davis_Gee Travel editorial guide article.');
 
   if (!post) {
     return (
