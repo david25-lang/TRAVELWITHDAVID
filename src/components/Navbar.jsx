@@ -101,18 +101,18 @@ export const Navbar = () => {
 
         <div
           id="mobile-nav"
-          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-white/10 bg-slate-950 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.55)] transition-transform duration-300 ${
+          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-amber-300/20 bg-slate-950/95 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.7)] backdrop-blur-xl transition-transform duration-300 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
+          <div className="mb-5 flex items-center justify-between border-b border-amber-300/20 pb-4">
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-amber-300 text-slate-950">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-amber-300 text-slate-950 shadow-[0_10px_24px_rgba(252,211,77,0.35)]">
                 <Sparkles size={16} />
               </span>
               <span className="text-sm font-semibold text-white">Menu</span>
             </div>
-            <button type="button" onClick={() => setMenuOpen(false)} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white" aria-label="Close navigation menu">
+            <button type="button" onClick={() => setMenuOpen(false)} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-amber-300/20 bg-white/5 text-white" aria-label="Close navigation menu">
               <X size={18} />
             </button>
           </div>
