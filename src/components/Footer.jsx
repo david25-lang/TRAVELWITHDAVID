@@ -74,8 +74,8 @@ export const Footer = () => (
       </div>
 
       <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white md:flex-row md:items-center md:justify-between">
-        <p>© 2026 Davis_Gee Travel. All rights reserved.</p>
-        <p>Discover More. Travel Better.</p>
+        <p className="text-white">© 2026 Davis_Gee Travel. All rights reserved.</p>
+        <p className="text-white">Discover More. Travel Better.</p>
       </div>
     </div>
   </footer>

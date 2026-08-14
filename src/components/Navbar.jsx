@@ -95,13 +95,13 @@ export const Navbar = () => {
         <button
           type="button"
           aria-label="Close menu"
-          className={`absolute inset-0 bg-slate-950/60 transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-slate-950 transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'}`}
           onClick={() => setMenuOpen(false)}
         />
 
         <div
           id="mobile-nav"
-          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-amber-300/20 bg-[#0F2747]/95 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.7)] backdrop-blur-xl transition-transform duration-300 ${
+          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-amber-300/20 bg-[#0F2747] p-4 shadow-[0_20px_60px_rgba(15,23,42,0.7)] transition-transform duration-300 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
