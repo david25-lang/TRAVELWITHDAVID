@@ -91,32 +91,53 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div
-        id="mobile-nav"
-        className={`overflow-hidden border-t border-white/10 bg-slate-950 transition-all duration-300 lg:hidden ${menuOpen ? 'max-h-[36rem] opacity-100' : 'max-h-0 opacity-0'}`}
-      >
-        <div className="shell py-4">
-          <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/90 p-3 shadow-[0_16px_40px_rgba(2,6,23,0.45)]">
-            <div className="grid gap-2">
-              {links.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  className={({ isActive }) =>
-                    `rounded-2xl px-4 py-3 text-sm font-medium transition-colors ${
-                      isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+      <div className={`fixed inset-0 z-40 lg:hidden ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        <button
+          type="button"
+          aria-label="Close menu"
+          className={`absolute inset-0 bg-slate-950/60 transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'}`}
+          onClick={() => setMenuOpen(false)}
+        />
+
+        <div
+          id="mobile-nav"
+          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-white/10 bg-slate-950 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.55)] transition-transform duration-300 ${
+            menuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-amber-300 text-slate-950">
+                <Sparkles size={16} />
+              </span>
+              <span className="text-sm font-semibold text-white">Menu</span>
             </div>
-            <Link to="/booking" className="gold-button mt-4 w-full justify-center">
-              Book a Trip
-              <ArrowRight size={16} />
-            </Link>
+            <button type="button" onClick={() => setMenuOpen(false)} className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white" aria-label="Close navigation menu">
+              <X size={18} />
+            </button>
           </div>
+
+          <div className="grid gap-2">
+            {links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  `rounded-2xl px-4 py-3 text-sm font-medium transition-colors ${
+                    isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <Link to="/booking" onClick={() => setMenuOpen(false)} className="gold-button mt-5 w-full justify-center">
+            Book a Trip
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </header>

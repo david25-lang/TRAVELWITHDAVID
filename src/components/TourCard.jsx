@@ -9,8 +9,8 @@ export const TourCard = ({ tour }) => {
   const saved = isSaved(tour.slug, 'tour');
 
   return (
-    <article className="surface card-hover group mx-auto w-full max-w-[340px] overflow-hidden rounded-[1.1rem] sm:max-w-none sm:rounded-[1.75rem]">
-      <div className="relative h-52 overflow-hidden sm:h-64">
+    <article className="surface card-hover group mx-auto w-full max-w-[340px] animate-fade-up overflow-hidden rounded-[1.1rem] sm:max-w-none sm:rounded-[1.75rem]">
+      <div className="max-md:hidden relative h-52 overflow-hidden sm:h-64">
         <img src={tour.image} alt={tour.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
         <button
@@ -36,15 +36,37 @@ export const TourCard = ({ tour }) => {
         </div>
       </div>
 
-      <div className="space-y-3 p-3 sm:space-y-4 sm:p-5">
-        <div className="flex items-center justify-between gap-2 text-[11px] text-slate-300 sm:gap-3 sm:text-sm">
-          <span>{tour.location}</span>
-          <span>{tour.duration}</span>
+      <div className="space-y-3 p-4 sm:space-y-4 sm:p-5">
+        <div className="flex items-center justify-between gap-2 text-[10px] text-slate-500 sm:text-xs">
+          <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1 font-medium text-slate-700 sm:hidden">{tour.category}</span>
+          <button
+            type="button"
+            onClick={() => toggleItem({ type: 'tour', slug: tour.slug, title: tour.title, image: tour.image, meta: tour.location, price: tour.price })}
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm sm:hidden"
+            aria-label={saved ? `Remove ${tour.title} from wishlist` : `Save ${tour.title} to wishlist`}
+          >
+            <Heart size={13} className={saved ? 'fill-rose-500 text-rose-500' : ''} />
+          </button>
         </div>
-        <p className="text-xs leading-5 text-slate-300 sm:text-sm sm:leading-7">{tour.description}</p>
+
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h3 className="text-lg font-semibold text-slate-950 sm:text-2xl">{tour.title}</h3>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:text-[11px]">{tour.location}</p>
+          </div>
+          <div className="hidden items-center gap-1 rounded-full bg-amber-50 px-2 py-1 text-[10px] font-medium text-amber-700 sm:inline-flex">
+            <Star size={12} fill="currentColor" /> {tour.rating}
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between gap-2 text-[11px] text-slate-500 sm:gap-3 sm:text-sm">
+          <span>{tour.duration}</span>
+          <span>{tour.location}</span>
+        </div>
+        <p className="text-sm leading-6 text-slate-600 sm:leading-7">{tour.description}</p>
         <div className="flex items-center justify-between gap-2 sm:gap-4">
-          <span className="text-[11px] text-slate-300 sm:text-sm">From <strong className="text-white">{formatCurrency(tour.price)}</strong></span>
-          <Link to={`/tours/${tour.slug}`} className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-200 transition hover:text-amber-100 sm:gap-2 sm:text-sm">
+          <span className="text-[11px] text-slate-600 sm:text-sm">From <strong className="text-slate-950">{formatCurrency(tour.price)}</strong></span>
+          <Link to={`/tours/${tour.slug}`} className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-950 transition hover:text-slate-700 sm:gap-2 sm:text-sm">
             View Trip <ArrowRight size={14} />
           </Link>
         </div>
