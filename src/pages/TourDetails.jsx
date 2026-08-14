@@ -47,40 +47,40 @@ const TourDetails = () => {
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">What is included</h2>
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-950">What is included</h2>
+            <ul className="mt-4 space-y-3 text-sm text-slate-900">
               {tour.includes.map((item) => <li key={item}>• {item}</li>)}
             </ul>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">What is excluded</h2>
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-950">What is excluded</h2>
+            <ul className="mt-4 space-y-3 text-sm text-slate-900">
               {tour.excludes.map((item) => <li key={item}>• {item}</li>)}
             </ul>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">Detailed itinerary</h2>
+            <h2 className="text-2xl font-semibold text-slate-950">Detailed itinerary</h2>
             <div className="mt-6 space-y-4">
               {tour.itinerary.map((day) => (
                 <div key={day.day} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm text-amber-200">{day.day}</p>
-                  <h3 className="mt-2 text-lg font-semibold text-white">{day.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-300">{day.summary}</p>
+                  <p className="text-sm text-amber-700">{day.day}</p>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-950">{day.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-900">{day.summary}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">Meeting point and cancellation</h2>
-            <p className="mt-4 text-sm leading-8 text-slate-300">Meeting point: {tour.meetingPoint}</p>
-            <p className="mt-2 text-sm leading-8 text-slate-300">Cancellation: {tour.cancellation}</p>
+            <h2 className="text-2xl font-semibold text-slate-950">Meeting point and cancellation</h2>
+            <p className="mt-4 text-sm leading-8 text-slate-900">Meeting point: {tour.meetingPoint}</p>
+            <p className="mt-2 text-sm leading-8 text-slate-900">Cancellation: {tour.cancellation}</p>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">FAQ</h2>
+            <h2 className="text-2xl font-semibold text-slate-950">FAQ</h2>
             <div className="mt-6">
               <FAQ items={tour.faq.map((question) => ({ question, answer: 'This is demo FAQ copy used to present the structure of the tour detail page.' }))} />
             </div>

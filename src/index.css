@@ -21,6 +21,24 @@
     background-image: none;
   }
 
+  p,
+  li,
+  dd,
+  dt,
+  label,
+  small {
+    color: #111827;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #111827;
+  }
+
   a {
     @apply transition-colors duration-200;
   }
@@ -82,7 +100,7 @@
   }
 
   .section-lead {
-    @apply mt-4 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg;
+    @apply mt-4 max-w-2xl text-base leading-8 text-slate-900 sm:text-lg;
   }
 
   /* Journeys section green theme */

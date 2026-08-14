@@ -44,69 +44,69 @@ const DestinationDetails = () => {
       <section className="shell mt-12 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <article className="space-y-8">
           <div className="grid gap-4 sm:grid-cols-3">
-            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-400">Average cost</p><p className="mt-2 text-2xl font-semibold text-white">{destination.averageCost}</p></div>
-            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-400">Starting price</p><p className="mt-2 text-2xl font-semibold text-white">{formatCurrency(destination.startingPrice)}</p></div>
-            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-400">Experiences</p><p className="mt-2 text-2xl font-semibold text-white">{destination.experiences}</p></div>
+            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-600">Average cost</p><p className="mt-2 text-2xl font-semibold text-slate-950">{destination.averageCost}</p></div>
+            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-600">Starting price</p><p className="mt-2 text-2xl font-semibold text-slate-950">{formatCurrency(destination.startingPrice)}</p></div>
+            <div className="surface rounded-[1.5rem] p-5"><p className="text-sm text-slate-600">Experiences</p><p className="mt-2 text-2xl font-semibold text-slate-950">{destination.experiences}</p></div>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h2 className="text-2xl font-semibold text-white">Destination overview</h2>
-            <p className="mt-4 text-sm leading-8 text-slate-300">{destination.description}</p>
+            <h2 className="text-2xl font-semibold text-slate-950">Destination overview</h2>
+            <p className="mt-4 text-sm leading-8 text-slate-900">{destination.description}</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="surface rounded-[2rem] p-6">
-              <h3 className="text-xl font-semibold text-white">Popular attractions</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              <h3 className="text-xl font-semibold text-slate-950">Popular attractions</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-900">
                 {destination.attractions.map((item) => <li key={item}>• {item}</li>)}
               </ul>
             </div>
             <div className="surface rounded-[2rem] p-6">
-              <h3 className="text-xl font-semibold text-white">Recommended hotels</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              <h3 className="text-xl font-semibold text-slate-950">Recommended hotels</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-900">
                 {destination.hotels.map((item) => <li key={item}>• {item}</li>)}
               </ul>
             </div>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h3 className="text-xl font-semibold text-white">Things to do</h3>
-            <p className="mt-4 text-sm leading-8 text-slate-300">Enjoy the curated atmosphere, local cuisine, and flexible excursions that match the pace of the city or island.</p>
+            <h3 className="text-xl font-semibold text-slate-950">Things to do</h3>
+            <p className="mt-4 text-sm leading-8 text-slate-900">Enjoy the curated atmosphere, local cuisine, and flexible excursions that match the pace of the city or island.</p>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h3 className="text-xl font-semibold text-white">Travel tips</h3>
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            <h3 className="text-xl font-semibold text-slate-950">Travel tips</h3>
+            <ul className="mt-4 space-y-3 text-sm text-slate-900">
               {destination.tips.map((tip) => <li key={tip}>• {tip}</li>)}
             </ul>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h3 className="text-xl font-semibold text-white">FAQ</h3>
+            <h3 className="text-xl font-semibold text-slate-950">FAQ</h3>
             <div className="mt-6">
               <FAQ items={faqs.slice(0, 4)} />
             </div>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h3 className="text-xl font-semibold text-white">Related destinations</h3>
+            <h3 className="text-xl font-semibold text-slate-950">Related destinations</h3>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {relatedDestinations.map((item) => (
                 <Link key={item.slug} to={`/destinations/${item.slug}`} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
-                  <p className="text-sm text-amber-200">{item.country}</p>
-                  <p className="mt-2 text-lg font-semibold text-white">{item.name}</p>
+                  <p className="text-sm text-amber-700">{item.country}</p>
+                  <p className="mt-2 text-lg font-semibold text-slate-950">{item.name}</p>
                 </Link>
               ))}
             </div>
           </div>
 
           <div className="surface rounded-[2rem] p-6 lg:p-8">
-            <h3 className="text-xl font-semibold text-white">Available tours</h3>
+            <h3 className="text-xl font-semibold text-slate-950">Available tours</h3>
             <div className="mt-6 grid gap-4">
               {relatedTours.map((tour) => (
                 <Link key={tour.slug} to={`/tours/${tour.slug}`} className="flex items-center justify-between rounded-[1.5rem] border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
-                  <span className="text-white">{tour.title}</span>
-                  <span className="text-amber-200">View</span>
+                  <span className="text-slate-950">{tour.title}</span>
+                  <span className="text-amber-700">View</span>
                 </Link>
               ))}
             </div>
@@ -116,14 +116,14 @@ const DestinationDetails = () => {
         <aside className="space-y-6 lg:sticky lg:top-28">
           <div className="surface-strong rounded-[2rem] p-6">
             <p className="eyebrow">Book or search</p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">Plan this destination</h2>
+            <h2 className="mt-3 text-2xl font-semibold text-slate-950">Plan this destination</h2>
             <div className="mt-6">
               <SearchBar mode="filters" initialValues={{ destination: destination.name, price: 'all', duration: 'all', travelType: 'all', rating: 'all', sort: 'popular' }} />
             </div>
           </div>
           <div className="surface rounded-[2rem] p-6">
-            <div className="flex items-center gap-3 text-amber-200"><Star size={18} /> Popular destination</div>
-            <p className="mt-4 text-sm leading-7 text-slate-300">The sticky panel gives desktop users a quick path to search or pivot into booking without leaving the page.</p>
+            <div className="flex items-center gap-3 text-amber-700"><Star size={18} /> Popular destination</div>
+            <p className="mt-4 text-sm leading-7 text-slate-900">The sticky panel gives desktop users a quick path to search or pivot into booking without leaving the page.</p>
           </div>
         </aside>
       </section>

@@ -80,7 +80,7 @@ export const Navbar = () => {
             <button
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-amber-300/20 bg-[#0F2747] text-white shadow-[0_8px_20px_rgba(15,39,71,0.45)] transition hover:bg-[#163765]"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -101,7 +101,7 @@ export const Navbar = () => {
 
         <div
           id="mobile-nav"
-          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-amber-300/20 bg-slate-950/95 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.7)] backdrop-blur-xl transition-transform duration-300 ${
+          className={`absolute right-0 top-0 h-full w-[72vw] max-w-[360px] border-l border-amber-300/20 bg-[#0F2747]/95 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.7)] backdrop-blur-xl transition-transform duration-300 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

@@ -47,7 +47,7 @@ const Home = () => {
         <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="space-y-6 sm:space-y-7">
             <div className="space-y-4 sm:space-y-5">
-              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500 shadow-sm sm:px-4 sm:text-xs">
+              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-800 shadow-sm sm:px-4 sm:text-xs">
                 <Sparkles size={14} /> Travel With Davis
               </p>
               <h1 className="max-w-3xl text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-[5.5rem] lg:leading-[0.95]">
@@ -71,7 +71,7 @@ const Home = () => {
               {heroStats.map((stat) => (
                 <div key={stat.label} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
                   <p className="text-3xl font-semibold text-slate-950">{stat.value}</p>
-                  <p className="mt-2 text-sm text-slate-500">{stat.label}</p>
+                  <p className="mt-2 text-sm text-slate-800">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -81,8 +81,8 @@ const Home = () => {
             <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-sm font-medium text-slate-500">We craft seamless travel experiences wherever you want to go.</p>
-                  <p className="mt-3 max-w-sm text-sm leading-7 text-slate-500">With Davis_Gee Travels, you get clarity, pace, and confidence at every step of the journey.</p>
+                  <p className="text-sm font-medium text-slate-800">We craft seamless travel experiences wherever you want to go.</p>
+                  <p className="mt-3 max-w-sm text-sm leading-7 text-slate-800">With Davis_Gee Travels, you get clarity, pace, and confidence at every step of the journey.</p>
                 </div>
                 <button type="button" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800">
                   Learn More
@@ -132,7 +132,7 @@ const Home = () => {
               <div key={point.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
                 <ShieldCheck className="text-slate-950" size={20} />
                 <h3 className="mt-4 text-lg font-semibold text-slate-950">{point.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-600">{point.description}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-900">{point.description}</p>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ const Home = () => {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-950 text-white font-semibold">0{index + 1}</div>
                 <div>
                   <p className="font-medium text-slate-950">{step}</p>
-                  <p className="text-sm text-slate-500">A guided, low-friction planning step.</p>
+                  <p className="text-sm text-slate-800">A guided, low-friction planning step.</p>
                 </div>
               </div>
             ))}
@@ -175,7 +175,7 @@ const Home = () => {
                 </div>
                 <div className="p-5">
                   <h3 className="text-xl font-semibold text-slate-950">{category.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">{category.description}</p>
+                  <p className="mt-3 text-sm leading-7 text-slate-900">{category.description}</p>
                 </div>
               </article>
             );

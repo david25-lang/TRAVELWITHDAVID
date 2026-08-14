@@ -37,8 +37,8 @@ export const TourCard = ({ tour }) => {
       </div>
 
       <div className="space-y-3 p-4 sm:space-y-4 sm:p-5">
-        <div className="flex items-center justify-between gap-2 text-[10px] text-slate-500 sm:text-xs">
-          <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1 font-medium text-slate-700 sm:hidden">{tour.category}</span>
+        <div className="flex items-center justify-between gap-2 text-[10px] text-slate-800 sm:text-xs">
+          <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1 font-medium text-slate-800 sm:hidden">{tour.category}</span>
           <button
             type="button"
             onClick={() => toggleItem({ type: 'tour', slug: tour.slug, title: tour.title, image: tour.image, meta: tour.location, price: tour.price })}
@@ -52,20 +52,20 @@ export const TourCard = ({ tour }) => {
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className="text-lg font-semibold text-slate-950 sm:text-2xl">{tour.title}</h3>
-            <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-slate-500 sm:text-[11px]">{tour.location}</p>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-slate-800 sm:text-[11px]">{tour.location}</p>
           </div>
           <div className="hidden items-center gap-1 rounded-full bg-amber-50 px-2 py-1 text-[10px] font-medium text-amber-700 sm:inline-flex">
             <Star size={12} fill="currentColor" /> {tour.rating}
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-2 text-[11px] text-slate-500 sm:gap-3 sm:text-sm">
+        <div className="flex items-center justify-between gap-2 text-[11px] text-slate-800 sm:gap-3 sm:text-sm">
           <span>{tour.duration}</span>
           <span>{tour.location}</span>
         </div>
-        <p className="text-sm leading-6 text-slate-600 sm:leading-7">{tour.description}</p>
+        <p className="text-sm leading-6 text-slate-900 sm:leading-7">{tour.description}</p>
         <div className="flex items-center justify-between gap-2 sm:gap-4">
-          <span className="text-[11px] text-slate-600 sm:text-sm">From <strong className="text-slate-950">{formatCurrency(tour.price)}</strong></span>
+          <span className="text-[11px] text-slate-900 sm:text-sm">From <strong className="text-slate-950">{formatCurrency(tour.price)}</strong></span>
           <Link to={`/tours/${tour.slug}`} className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-950 transition hover:text-slate-700 sm:gap-2 sm:text-sm">
             View Trip <ArrowRight size={14} />
           </Link>

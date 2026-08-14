@@ -17,10 +17,10 @@ export const FAQ = ({ items }) => {
               onClick={() => setOpenIndex(expanded ? -1 : index)}
               aria-expanded={expanded}
             >
-              <span className="text-sm font-medium text-white sm:text-base">{item.question}</span>
-              <ChevronDown className={`shrink-0 transition-transform ${expanded ? 'rotate-180' : ''}`} size={18} />
+              <span className="text-sm font-medium text-slate-950 sm:text-base">{item.question}</span>
+              <ChevronDown className={`shrink-0 text-slate-900 transition-transform ${expanded ? 'rotate-180' : ''}`} size={18} />
             </button>
-            {expanded ? <div className="px-5 pb-5 text-sm leading-7 text-slate-300">{item.answer}</div> : null}
+            {expanded ? <div className="px-5 pb-5 text-sm leading-7 text-slate-900">{item.answer}</div> : null}
           </div>
         );
       })}

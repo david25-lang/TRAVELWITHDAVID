@@ -33,12 +33,12 @@ export const Footer = () => (
           <div>
             <p className="eyebrow">Davis_Gee Travel</p>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl">Get travel inspiration in your inbox.</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white sm:text-base">
               Premium trip ideas, seasonal offers, and practical destination notes delivered with a calm cadence.
             </p>
           </div>
           <NewsletterForm compact />
-          <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="flex flex-col gap-3 text-sm text-white sm:flex-row sm:flex-wrap sm:items-center">
             <span className="inline-flex items-center gap-2"><Mail size={16} /> davidyinka660@gmail.com</span>
             <span className="inline-flex items-center gap-2"><Phone size={16} /> +2349135074211</span>
             <span className="inline-flex items-center gap-2"><MapPin size={16} /> Lagos, Nigeria</span>
@@ -49,11 +49,11 @@ export const Footer = () => (
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(columns).map(([title, items]) => (
               <div key={title}>
-                <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">{title}</h3>
-                <ul className="mt-4 space-y-3 text-sm text-slate-300">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-white">{title}</h3>
+                <ul className="mt-4 space-y-3 text-sm text-white">
                   {items.map((item) => (
                     <li key={item.label}>
-                      <Link to={item.to} className="transition-colors hover:text-white">
+                      <Link to={item.to} className="text-white transition-colors hover:text-white">
                         {item.label}
                       </Link>
                     </li>
@@ -73,7 +73,7 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+      <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white md:flex-row md:items-center md:justify-between">
         <p>© 2026 Davis_Gee Travel. All rights reserved.</p>
         <p>Discover More. Travel Better.</p>
       </div>

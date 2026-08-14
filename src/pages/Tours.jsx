@@ -46,7 +46,7 @@ const Tours = () => {
             {filteredTours.map((tour) => <TourCard key={tour.slug} tour={tour} />)}
           </div>
         ) : (
-          <div className="surface rounded-[2rem] p-10 text-center text-slate-300">No tours match your current filters.</div>
+          <div className="surface rounded-[2rem] p-10 text-center text-slate-900">No tours match your current filters.</div>
         )}
       </section>
     </div>
