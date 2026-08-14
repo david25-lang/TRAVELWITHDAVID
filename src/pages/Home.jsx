@@ -111,7 +111,7 @@ const Home = () => {
           title="A premium image-led destination gallery"
           description="Explore destinations chosen for atmosphere, service quality, and memorable travel value."
         />
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:gap-8 md:grid-cols-2 xl:grid-cols-4">
           {featuredDestinations.map((destination) => (
             <div key={destination.slug} className="h-full">
               <DestinationCard destination={destination} />
