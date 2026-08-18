@@ -49,7 +49,7 @@ export const Hero = ({ onSearch }) => (
                   { icon: CalendarDays, label: 'Flexible Dates' },
                   { icon: Users, label: 'Expert Support' },
                 ].map((item) => (
-                  <div key={item.label} className="surface rounded-2xl px-4 py-3 text-sm text-slate-200">
+                  <div key={item.label} className="rounded-2xl border border-white/20 bg-slate-950/80 px-4 py-3 text-sm text-white backdrop-blur-sm">
                     <item.icon className="mb-2 text-amber-300" size={18} />
                     {item.label}
                   </div>

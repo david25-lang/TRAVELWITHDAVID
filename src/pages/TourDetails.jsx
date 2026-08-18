@@ -15,9 +15,9 @@ const TourDetails = () => {
 
   if (!tour) {
     return (
-      <div className="shell py-24 text-center text-slate-300">
-        <h1 className="text-3xl font-semibold text-white">Tour not found</h1>
-        <Link to="/tours" className="mt-6 inline-flex text-amber-200">Back to tours</Link>
+      <div className="shell py-24 text-center text-slate-700">
+        <h1 className="text-3xl font-semibold text-slate-950">Tour not found</h1>
+        <Link to="/tours" className="mt-6 inline-flex text-amber-700">Back to tours</Link>
       </div>
     );
   }
@@ -64,7 +64,7 @@ const TourDetails = () => {
             <h2 className="text-2xl font-semibold text-slate-950">Detailed itinerary</h2>
             <div className="mt-6 space-y-4">
               {tour.itinerary.map((day) => (
-                <div key={day.day} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+                <div key={day.day} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
                   <p className="text-sm text-amber-700">{day.day}</p>
                   <h3 className="mt-2 text-lg font-semibold text-slate-950">{day.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-slate-900">{day.summary}</p>
@@ -89,15 +89,15 @@ const TourDetails = () => {
 
         <aside className="space-y-6 lg:sticky lg:top-28">
           <div className="surface-strong rounded-[2rem] p-6">
-            <p className="eyebrow">Price</p>
+            <p className="eyebrow text-white">Price</p>
             <p className="mt-3 text-4xl font-semibold text-white">{formatCurrency(tour.price)}</p>
             <p className="mt-2 text-sm text-slate-400">From {tour.location}</p>
             <Link to="/booking" className="gold-button mt-6 w-full justify-center">Book This Trip</Link>
           </div>
           <div className="surface rounded-[2rem] p-6">
-            <p className="text-sm text-slate-400">Rating</p>
-            <p className="mt-2 text-2xl font-semibold text-white">{tour.rating} / 5</p>
-            <p className="mt-2 text-sm text-slate-400">{tour.reviews} reviews</p>
+            <p className="text-sm text-slate-600">Rating</p>
+            <p className="mt-2 text-2xl font-semibold text-slate-950">{tour.rating} / 5</p>
+            <p className="mt-2 text-sm text-slate-600">{tour.reviews} reviews</p>
           </div>
         </aside>
       </section>

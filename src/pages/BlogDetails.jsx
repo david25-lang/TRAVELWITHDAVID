@@ -13,9 +13,9 @@ const BlogDetails = () => {
 
   if (!post) {
     return (
-      <div className="shell py-24 text-center text-slate-300">
-        <h1 className="text-3xl font-semibold text-white">Article not found</h1>
-        <Link to="/blog" className="mt-6 inline-flex text-amber-200">Back to Travel Guide</Link>
+      <div className="shell py-24 text-center text-slate-700">
+        <h1 className="text-3xl font-semibold text-slate-950">Article not found</h1>
+        <Link to="/blog" className="mt-6 inline-flex text-amber-700">Back to Travel Guide</Link>
       </div>
     );
   }
@@ -31,11 +31,11 @@ const BlogDetails = () => {
 
       <section className="shell mt-12 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <article className="surface rounded-[2rem] p-6 lg:p-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
             <span>{post.date}</span>
             <span>{post.readTime}</span>
           </div>
-          <div className="mt-8 space-y-5 text-base leading-8 text-slate-300">
+          <div className="mt-8 space-y-5 text-base leading-8 text-slate-700">
             {post.content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
         </article>

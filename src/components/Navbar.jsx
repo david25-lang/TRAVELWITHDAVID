@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { ArrowRight, Menu, Search, Sparkles, X } from 'lucide-react';
+import { ArrowRight, Menu, Moon, Search, Sparkles, Sun, X } from 'lucide-react';
 
 const links = [
   { label: 'Home', to: '/' },
@@ -15,6 +15,7 @@ const links = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => window.localStorage.getItem('theme') === 'dark');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -28,6 +29,11 @@ export const Navbar = () => {
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+    window.localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
   return (
     <header
@@ -64,6 +70,9 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <button type="button" onClick={() => setDarkMode((enabled) => !enabled)} className="icon-button" aria-label={darkMode ? 'Use light mode' : 'Use dark mode'}>
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             <button type="button" onClick={() => navigate('/tours')} className="icon-button" aria-label="Search trips">
               <Search size={18} />
             </button>
@@ -74,6 +83,9 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
+            <button type="button" onClick={() => setDarkMode((enabled) => !enabled)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10" aria-label={darkMode ? 'Use light mode' : 'Use dark mode'}>
+              {darkMode ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
             <button type="button" onClick={() => navigate('/tours')} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10" aria-label="Search trips">
               <Search size={18} />
             </button>

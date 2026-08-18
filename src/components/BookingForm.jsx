@@ -166,9 +166,9 @@ export const BookingForm = ({ initialData = {} }) => {
               <div className="flex items-center justify-between gap-4 border-t border-white/10 pt-4 text-base"><dt>Total</dt><dd className="text-amber-200">{formatCurrency(total)}</dd></div>
             </dl>
           </div>
-          <div className="space-y-4 rounded-[1.75rem] border border-amber-300/20 bg-amber-300/10 p-5 text-amber-50">
-            <div className="flex items-center gap-3 text-amber-200"><ClipboardList size={18} /> Final review</div>
-            <p className="text-sm leading-7 text-amber-50/90">
+          <div className="space-y-4 rounded-[1.75rem] border border-amber-200 bg-amber-50 p-5 text-amber-950">
+            <div className="flex items-center gap-3 text-amber-800"><ClipboardList size={18} /> Final review</div>
+            <p className="text-sm leading-7 text-amber-950">
               Confirming this booking saves the current details locally and demonstrates the final step of the premium booking flow.
             </p>
           </div>

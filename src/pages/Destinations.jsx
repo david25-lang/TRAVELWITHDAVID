@@ -40,7 +40,7 @@ const Destinations = () => {
 
       <section className="shell mt-12 space-y-8">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-sm text-slate-400">Showing {filteredDestinations.length} destinations</p>
+          <p className="text-sm text-slate-600">Showing {filteredDestinations.length} destinations</p>
           <button type="button" onClick={() => navigate('/wishlist')} className="ghost-button">
             My Wishlist
           </button>
@@ -55,7 +55,7 @@ const Destinations = () => {
             ))}
           </div>
         ) : (
-          <div className="surface rounded-[2rem] p-10 text-center text-slate-300">No destinations match your current filters.</div>
+          <div className="surface rounded-[2rem] p-10 text-center text-slate-700">No destinations match your current filters.</div>
         )}
       </section>
     </div>

@@ -132,7 +132,7 @@ const Home = () => {
               <div key={point.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
                 <ShieldCheck className="text-slate-950" size={20} />
                 <h3 className="mt-4 text-lg font-semibold text-slate-950">{point.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-900">{point.description}</p>
+                <p className="mt-2 text-sm leading-7 text-slate-950">{point.description}</p>
               </div>
             ))}
           </div>
@@ -148,8 +148,8 @@ const Home = () => {
               <div key={step} className="flex items-center gap-4 rounded-[1.4rem] border border-slate-200 bg-[#faf8f4] p-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-950 text-white font-semibold">0{index + 1}</div>
                 <div>
-                  <p className="font-medium text-slate-950">{step}</p>
-                  <p className="text-sm text-slate-800">A guided, low-friction planning step.</p>
+                  <p className="font-medium text-black">{step}</p>
+                  <p className="text-sm text-black">A guided, low-friction planning step.</p>
                 </div>
               </div>
             ))}

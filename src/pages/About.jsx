@@ -24,13 +24,13 @@ const About = () => {
         <div className="grid gap-6 lg:grid-cols-2">
           <div className="surface rounded-[2rem] p-6 lg:p-8">
             <SectionHeading eyebrow="Our Story" title="Why Davis_Gee exists" description="To make premium travel planning feel clear, human, and visually refined." />
-            <p className="mt-6 text-sm leading-7 text-slate-300">
+            <p className="mt-6 text-sm leading-7 text-slate-700">
               Davis_Gee exists as a frontend case study for a company that treats travel as an experience worth designing carefully. The brand balances luxury and practicality, with a visual system that feels calm rather than flashy.
             </p>
           </div>
           <div className="surface rounded-[2rem] p-6 lg:p-8">
             <SectionHeading eyebrow="Our Mission" title="Better journeys through better planning" description="Every interaction should feel dependable, accessible, and easy to scan." />
-            <p className="mt-6 text-sm leading-7 text-slate-300">
+            <p className="mt-6 text-sm leading-7 text-slate-700">
               The site architecture emphasizes reusable components, content-driven layouts, and responsive detail pages that could support a real commercial travel brand.
             </p>
           </div>
@@ -39,7 +39,7 @@ const About = () => {
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="surface rounded-[2rem] p-6 lg:p-8">
             <SectionHeading eyebrow="Our Values" title="Design, trust, and service standards" description="The brand language is intentionally premium and composed." />
-            <ul className="mt-6 space-y-4 text-sm leading-7 text-slate-300">
+            <ul className="mt-6 space-y-4 text-sm leading-7 text-slate-700">
               <li>Premium, but not overdesigned.</li>
               <li>Useful, but still emotionally engaging.</li>
               <li>Responsive, accessible, and built for real frontend workflows.</li>
@@ -49,9 +49,9 @@ const About = () => {
             <SectionHeading eyebrow="Team" title="A small group with a consistent service mindset" description="Sample team members help the page feel like a real company profile." />
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {team.map((member) => (
-                <div key={member.name} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                  <p className="text-lg font-semibold text-white">{member.name}</p>
-                  <p className="mt-2 text-sm text-slate-400">{member.role}</p>
+                <div key={member.name} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <p className="text-lg font-semibold text-slate-950">{member.name}</p>
+                  <p className="mt-2 text-sm text-slate-600">{member.role}</p>
                 </div>
               ))}
             </div>

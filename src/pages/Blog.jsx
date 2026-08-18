@@ -24,13 +24,13 @@ const Blog = () => {
                 <img src={post.image} alt={post.title} className="h-36 w-full flex-shrink-0 rounded-md object-cover sm:w-40" />
                 <div>
                   <p className="eyebrow">{post.category}</p>
-                  <h2 className="mt-2 text-2xl font-semibold text-white">{post.title}</h2>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{post.excerpt} {post.content && post.content.length ? post.content.slice(0, 2).join(' ') : ''}</p>
-                  <div className="mt-4 flex items-center justify-between text-sm text-slate-400">
+                  <h2 className="mt-2 text-2xl font-semibold text-slate-950">{post.title}</h2>
+                  <p className="mt-3 text-sm leading-7 text-slate-700">{post.excerpt} {post.content && post.content.length ? post.content.slice(0, 2).join(' ') : ''}</p>
+                  <div className="mt-4 flex items-center justify-between text-sm text-slate-600">
                     <span>{post.date}</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <Link to={`/blog/${post.slug}`} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-200">
+                  <Link to={`/blog/${post.slug}`} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-amber-700">
                     Read More
                   </Link>
                 </div>
@@ -40,19 +40,19 @@ const Blog = () => {
         </div>
 
         <aside className="md:col-span-1 space-y-6">
-          <div className="rounded-[1.25rem] border border-white/10 bg-white/5 p-4">
-            <h3 className="text-lg font-semibold text-white">How to use this guide</h3>
-            <p className="mt-3 text-sm text-slate-300">Practical tips, packing lists, and planning notes to help you prepare for trips with confidence. Click any article to read a full guide.</p>
+          <div className="rounded-[1.25rem] border border-slate-200 bg-white p-4 shadow-sm">
+            <h3 className="text-lg font-semibold text-slate-950">How to use this guide</h3>
+            <p className="mt-3 text-sm text-slate-700">Practical tips, packing lists, and planning notes to help you prepare for trips with confidence. Click any article to read a full guide.</p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-[0.2em]">How to travel — Popular reads</h4>
+            <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-[0.2em]">How to travel — Popular reads</h4>
             {blogPosts.slice(0, 10).map((post) => (
-              <Link key={post.slug} to={`/blog/${post.slug}`} className="flex items-center gap-3 rounded-md border border-white/10 bg-white/5 p-3 transition hover:bg-white/10">
+              <Link key={post.slug} to={`/blog/${post.slug}`} className="flex items-center gap-3 rounded-md border border-slate-200 bg-white p-3 shadow-sm transition hover:bg-slate-50">
                 <img src={post.image} alt={post.title} className="h-12 w-16 rounded object-cover" />
                 <div className="text-sm">
-                  <div className="font-medium text-white">{post.title}</div>
-                  <div className="text-xs text-slate-400">{post.readTime}</div>
+                  <div className="font-medium text-slate-950">{post.title}</div>
+                  <div className="text-xs text-slate-600">{post.readTime}</div>
                 </div>
               </Link>
             ))}

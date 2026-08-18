@@ -10,7 +10,7 @@ export const ExperienceCard = ({ experience }) => (
       </div>
     </div>
     <div className="p-5">
-      <p className="text-sm leading-7 text-slate-300">{experience.description}</p>
+      <p className="text-sm leading-7 text-slate-700">{experience.description}</p>
     </div>
   </article>
 );
